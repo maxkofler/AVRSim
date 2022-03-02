@@ -1,2 +1,2 @@
-# AVRSim
-A flexible AVR microcontroller simulator
+# USim
+A flexible microcontroller simulator
