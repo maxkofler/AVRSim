@@ -18,16 +18,10 @@ int main(){
 
 		LOGU("Welcome to USim");
 
-		USim::CPU* cpus[4];
+		USim::CPU* cpu = new USim::CPUS::AVREplus();
 
-		cpus[0] = new USim::CPU_Harvard();
-		cpus[1] = new USim::CPU_Neumann();
-		cpus[2] = new USim::CPUS::AVREplus();
-
-		for (int i = 0; i < 3; i++){
-			LOGI("CPU " + std::to_string(i) + ": " + cpus[i]->getArchName());
-		}
-
+		LOGI("CPU core name: " + cpu->getArchName());
+		LOGI("CPU core width: " + std::to_string(cpu->getArchWidth()) + " bits");
 	}
 
 	return 0;

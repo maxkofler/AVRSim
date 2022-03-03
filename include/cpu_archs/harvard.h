@@ -9,8 +9,9 @@ namespace USim{
 
 	public:
 
-		CPU_ARCH					getArch(){return CPU_ARCH_HARVARD;}
-		virtual std::string			getArchName();
+		CPU_ARCH						getArch() {return CPU_ARCH_HARVARD;}
+		virtual std::string				getArchName() = 0;
+		virtual uint8_t					getArchWidth() = 0;
 
 	};
 

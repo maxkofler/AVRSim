@@ -9,7 +9,9 @@ namespace USim{
 		class AVREplus : public CPU_Harvard{
 
 		public:
-			std::string					getArchName(){return "AVRe+";}
+			USim::CPU_ARCH				getArch() {return USim::CPU_ARCH_HARVARD;}
+			std::string					getArchName() {return "AVRe+";}
+			uint8_t						getArchWidth() {return 8;}
 
 		};
 

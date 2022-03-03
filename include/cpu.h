@@ -31,6 +31,11 @@ namespace USim{
 		virtual std::string				getArchName() = 0;
 
 		/**
+		 * @brief	Returns the architecture width in bits, the type of processor: 8-bit, 16-bit...
+		 */
+		virtual uint8_t					getArchWidth() = 0;
+
+		/**
 		 * @brief	Fetches the next instruction from memory
 		 */
 		virtual bool					fetch();
@@ -39,6 +44,13 @@ namespace USim{
 		 * @brief	Executes the previously fetched instruction
 		 */
 		virtual bool					exec();
+
+	protected:
+		
+		/**
+		 * @brief	The register file
+		 */
+		void*							_r;
 
 	};
 
