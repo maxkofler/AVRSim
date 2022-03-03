@@ -20,6 +20,7 @@ include_directories(include)
 include_directories(Log/include)
 
 file (GLOB_RECURSE CXX_FILES "src/**.cpp")
+file (GLOB_RECURSE H_FILES "include/**.h")
 
-add_executable(${PROJECT_NAME} ${CXX_FILES})
+add_executable(${PROJECT_NAME} ${CXX_FILES} ${H_FILES})
 target_link_libraries(${PROJECT_NAME} log Qt${QT_VERSION_MAJOR}::Widgets)

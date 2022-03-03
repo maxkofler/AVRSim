@@ -5,11 +5,12 @@
 
 namespace USim{
 
-	class CPU_Harvard : public CPU{
+	 class CPU_Harvard : public CPU{
 
 	public:
 
-		CPU_ARCH				getArch(){return CPU_ARCH_HARVARD;}
+		CPU_ARCH					getArch(){return CPU_ARCH_HARVARD;}
+		virtual std::string			getArchName();
 
 	};
 
